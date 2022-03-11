@@ -220,7 +220,7 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script>
 
-   const endpoint = "https://striveschool-api.herokuapp.com/api/movies/"
+   const endpoint = "https://striveschool-api.herokuapp.com/api/movies/"+category
    const firstRow = document.getElementById("firstrow")
 
 
@@ -231,7 +231,7 @@
 
 
 
-async function fetchResult (){
+async function fetchResult (category){
     const response = await fetch(endpoint,{
 headers: {
 "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjI4Y2NhMDRlYTdiMTAwMTVkMDY3ZTkiLCJpYXQiOjE2NDcwMDEyMDcsImV4cCI6MTY0ODIxMDgwN30.OlrfZEmHe0B28rSFckUjdr_yCX1-c3ffrhLMj5BnFAc"
