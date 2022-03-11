@@ -103,7 +103,7 @@
       const params = new URLSearchParams(window.location.search);
       const id = params.get("id");
 
-      const imgUrl = document.getElementById("img");
+      const imgeUrl = document.getElementById("img");
       const name = document.getElementById("name");
       const description = document.getElementById("description");
       const category = document.getElementById("category");
@@ -126,7 +126,7 @@
 
             const data = await response.json();
 
-            imgUrl.value = data.imageUrl;
+            imgeUrl.value = data.imageUrl;
             name.value = data.name;
             description.value = data.description;
             category.value = data.category;
@@ -141,7 +141,7 @@
 
 
         const object = {
-          imageUrl: imgUrl.value,
+          imageUrl: imgeUrl.value,
           name: name.value,
           description: description.value,
           category: category.value,
