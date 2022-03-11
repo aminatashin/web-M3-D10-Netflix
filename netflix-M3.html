@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <linkrel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="homepage.css">
+
+
+  <title>Netflix</title>
+  </head>
+
+  <body>
+    <div class="container-fluid px-md-4">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item active"> <a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tv Shows </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Movies </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Recently Added </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">My List </a></li>
+                </ul>
+                <i class="bi2 bi-search mr-2" style="font-size: 24px"></i>
+                <span class="kids text-muted mr-2">KIDS</span>
+                <i class="bi bi-bell mr-3" style="font-size: 24px"></i>
+                <div id="kidimg" class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split"
+                        data-toggle="dropdown" aria-expanded="false">
+                       
+                        <span class="sr-only">Toggle Dropdown</span>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="...">Home</a></li>
+                            <!--MISSING HOOK TO LINK PAGES-->
+                            <li><a class="dropdown-item" href="/M2/D5/NetFlix Project/profile.html">Your Profile</a>
+                            </li>
+                            <li><a class="dropdown-item" href="...">Settings</a></li>
+                            <!--MISSING HOOK TO LINK PAGES-->
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                        </ul>
+                        </li>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+ <!--GRID CONTAINING GENRE AND OTHER ELEMENTS-->
+ <div class="container-fluid px-md-5 mb-4 mt-4">
+    <div class="row mx-0">
+    <h4 class="title-prime py-md-3">TV Shows</h4>
+    <div class="col">
+    <div class="dropdown py-md-3">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+            Genres
+          </button>
+          <button onclick="fetchResult()"></button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Comedy</a>
+            <a class="dropdown-item" href="#">Thriller</a>
+            <a class="dropdown-item" href="#">SciFi</a>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2 align-items-center">
+        <div class="col align-items-center">
+       <ion-icon name="list-outline" class="ionFirst" ></ion-icon>
+       <ion-icon name="grid-outline" class="ionFirst"></ion-icon>
+        </div>
+   </div>
+  </div>
+
+   </div>
+   <!--2ND MAIN GRID - New Version, Responsive-->
+
+<div class="container-fluid px-md-5 mb-4">
+    <div class="mt-4 mb-2">
+        <h4 class="title-prime">Trending</h4>
+    </div>
+    <div class="row mx-n1" id="firstrow">
+        <!-- <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media0.webp" alt="image movie" class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media1.jpg" alt="image movie" class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media10.jpg" alt="image movie" class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media12.jpg" alt="image movie" class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media20.jpg" alt="image movie" class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media22.webp" alt="image movie" class="img-fluid w-100 rounded">
+        </div> -->
+    </div>
+    <div class="mt-4 mb-2">
+        <h4 class="title-prime">Watch It Again</h4>
+    </div>
+    <div class="row mx-n1">
+        <!-- <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media11.jpg" alt="image movie" class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media13.jpg" alt="image movie" class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media14.webp" alt="image movie" class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media15.jpg" alt="image movie" class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media23.webp" alt="image movie" class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media24.jpg" alt="image movie" class="img-fluid w-100 rounded">
+        </div> -->
+    </div>
+    <div class="mt-4 mb-2">
+        <h4 class="title-prime">New Releases</h4>
+    </div>
+    <div class="row mx-n1">
+        <!-- <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media16.webp" alt="image movie" class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media18.jpg" alt="image movie" class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media19.webp" alt="image movie" class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media17.jpg" alt="image movie" class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media25.webp" alt="image movie" class="img-fluid w-100 rounded">
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+            <img src="./netflix-ui-start/assets/media/media26.webp" alt="image movie" class="img-fluid w-100 rounded">
+        </div> -->
+        </div>
+</div>
+
+<!--FOOTER-->
+<footer>
+    <div class="container-fluid px-sm-4 px-md-5 mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-6">
+                <ion-icon name="logo-facebook" size="large"></ion-icon>
+                <ion-icon name="logo-instagram" size="large"></ion-icon>
+                <ion-icon name="logo-twitter" size="large"></ion-icon>
+                <ion-icon name="logo-youtube" size="large"></ion-icon>
+
+                <div class="row mt-3">
+                    <div class="col-6 col-sm-3 mb-3 mb-sm-0">
+                        <ul class="list-group list-unstyled text-muted">
+                            <li>Audio and subtitles</li>
+                            <li>Media Center</li>
+                            <li>Privacy</li>
+                            <li>Contact us</li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-sm-3 mb-3 mb-sm-0">
+                        <ul class="list-group list-unstyled text-muted">
+                            <li>Audio Description</li>
+                            <li>Investor Relations</li>
+                            <li>Legal Notices</li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-sm-3 mb-3 mb-sm-0">
+                        <ul class="list-group list-unstyled text-muted">
+                            <li>Help Center</li>
+                            <li>Jobs</li>
+                            <li>Cookie Preferences</li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-sm-3 mb-3 mb-sm-0">
+                        <ul class="list-group list-unstyled text-muted">
+                            <li>Gift Cards</li>
+                            <li>Terms of Use</li>
+                            <li>Corporate Information</li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-outline-light mt-2 px-md-4">Service Code</button>
+                <p class="mt-3"><small>Netflix.Inc || All rights reserved</small></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<button class="btn btn primary">Edite</button>
+
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+
+   const endpoint = "https://striveschool-api.herokuapp.com/api/movies/"
+   const firstRow = document.getElementById("firstrow")
+
+
+
+
+
+
+
+
+
+async function fetchResult (){
+    const response = await fetch(endpoint,{
+headers: {
+"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjI4Y2NhMDRlYTdiMTAwMTVkMDY3ZTkiLCJpYXQiOjE2NDcwMDEyMDcsImV4cCI6MTY0ODIxMDgwN30.OlrfZEmHe0B28rSFckUjdr_yCX1-c3ffrhLMj5BnFAc"
+}
+})
+    const data = await response.json()
+    console.log(data)
+    firstRow.innerHTML = data.map(movie=>
+    `
+    <div class="col-6 col-sm-4 col-md-2 px-1 mb-2 mb-md-0">
+    <div class="card" ">
+        <a href="./backoffice?id=${movie.id}"
+  <img src="${movie.imageUrl}" class="card-img-top" alt="photo">
+  </a>
+  <div class="card-body">
+    <a href="./backoffice?id=${movie.id}"
+    <h5 class="card-title">${movie.name}</h5>
+    </a>
+    <p class="card-text">${movie.description}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">${movie.category}</li>
+    <a href="./detail"
+    <button class="btn btn primary">Edite</button>
+   </a>
+  </ul>
+  </div>
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    `)
+}
+
+
+
+
+
+
+
+</script>
+</body>
+</html> 
