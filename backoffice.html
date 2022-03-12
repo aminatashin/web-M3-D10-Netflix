@@ -170,10 +170,10 @@
           if (response.ok) {
             const data = await response.json();
             console.log(data);
-            alert("successfull changes" + (id ? update : create));
+            alert("successfull changes") ;
             window.location.assign("/netflix-M3.html");
           } else {
-            console.log(erro);
+            
           }
         } catch (error) {
             console.log(error);
